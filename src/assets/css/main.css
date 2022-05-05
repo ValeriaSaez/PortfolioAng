@@ -753,6 +753,23 @@ footer {
     margin-top: 0px;
   }
 }
+
+.shrink {
+  width: 100%;
+  transition: all ease-in-out 0.8s;
+  background-color: #f73072;
+  position: fixed;
+  opacity: 0.7;
+}
+.top {
+  width: 100%;
+  transition: all ease-in-out 0.8s;
+  background-color: #f73072;
+}
+
+.bottom {
+  border-bottom: 1px solid #333;
+}
 /**********************BANNER*******************/
 img {
   max-width: 100%;
