@@ -5,6 +5,10 @@
 
 /*Conocimientos*/
 
+function showModal() {
+  $("#modal_mod_formacion").modal("show");
+}
+
 $(document).ready(function () {
   var altura = $("nav").offset().top;
   $(window).on("scroll", function () {
@@ -15,16 +19,6 @@ $(document).ready(function () {
       $("nav").addClass("top");
     }
   });
-  $("#selected").on("click", function () {
-    var position = 0;
-    $("body, html").animate(
-      {
-        scrollTop: position + "px",
-      },
-      2000
-    );
-    $("#selected").addClass("bottom");
-  });
 
   $("#selected").on("click", function () {
     var position = 0;
@@ -37,8 +31,8 @@ $(document).ready(function () {
     $("#selected").addClass("bottom");
   });
 
-  $("#selected").on("click", function () {
-    var position = 0;
+  $("#valeriasaez").on("click", function () {
+    var position = 450;
     $("body, html").animate(
       {
         scrollTop: position + "px",
@@ -48,8 +42,8 @@ $(document).ready(function () {
     $("#selected").addClass("bottom");
   });
 
-  $("#selected").on("click", function () {
-    var position = 0;
+  $("#educacion").on("click", function () {
+    var position = 750;
     $("body, html").animate(
       {
         scrollTop: position + "px",
@@ -59,8 +53,41 @@ $(document).ready(function () {
     $("#selected").addClass("bottom");
   });
 
-  $("#selected").on("click", function () {
-    var position = 0;
+  $("#formacion").on("click", function () {
+    var position = 750;
+    $("body, html").animate(
+      {
+        scrollTop: position + "px",
+      },
+      2000
+    );
+    $("#selected").addClass("bottom");
+  });
+
+  $("#conocimientos").on("click", function () {
+    var position = 1050;
+    $("body, html").animate(
+      {
+        scrollTop: position + "px",
+      },
+      2000
+    );
+    $("#selected").addClass("bottom");
+  });
+
+  $("#portfolio").on("click", function () {
+    var position = 1350;
+    $("body, html").animate(
+      {
+        scrollTop: position + "px",
+      },
+      2000
+    );
+    $("#selected").addClass("bottom");
+  });
+
+  $("#contacto").on("click", function () {
+    var position = 1650;
     $("body, html").animate(
       {
         scrollTop: position + "px",

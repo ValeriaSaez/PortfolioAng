@@ -11,7 +11,10 @@
         <span class="login_val"><i class="bi bi-person-fill"></i></span>
       </div>
       <div class="container_icon">
-        <span class="social_icon"><i class="bi bi-whatsapp"></i></span>
+        <span class="social_icon">
+          <a href="https://wa.me/542616642780?text=Hola" target="_blank">
+            <i class="bi bi-whatsapp"></i></a
+        ></span>
         <span class="social_icon"><i class="bi bi-linkedin"></i></span>
         <span class="social_icon"><i class="bi bi-envelope"></i></span>
         <span class="social_icon"><i class="bi bi-github"></i></span>
@@ -43,7 +46,7 @@
               <li><a href="#" id="conocimientos">CONOCIMIENTOS</a></li>
             </ul>
           </li>
-          <li><a href="#" id="portfolio">Portfolio</a></li>
+          <li><a href="#" id="portfolio">PORTFOLIO</a></li>
           <li><a href="#" id="contacto">CONTACTO</a></li>
         </ul>
       </nav>
@@ -111,7 +114,6 @@
   </article>
 
   <!--Formacion-->
-
   <article class="bck_cards">
     <div class="circulo_img">
       <img src="./assets/img/formacion.png" alt="" />
@@ -137,6 +139,8 @@
               <p>
                 Ingeniería en Sistemas de Información. Tercer año Incompleto.
               </p>
+              <button type="button" onclick="showModal();">Editar</button>
+              <button>cerrar</button>
             </div>
           </div>
         </div>
@@ -314,10 +318,27 @@
   </div>
 </footer>
 
-<!--jquery-->
-<script type="text/javascript" src="./assets/js/dist/jquery.js"></script>
-<!--Bootstrap JS-->
-
-<script src="./assets/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<script src="./assets/js/script.js"></script>
+<div id="modal_mod_formacion" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modificar Formacion</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="txt_formacion" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
