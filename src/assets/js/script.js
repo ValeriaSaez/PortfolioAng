@@ -10,13 +10,13 @@ function showModal() {
 }
 
 $(document).ready(function () {
-  var altura = $("nav").offset().top;
+  var altura = $(".container_menu ").offset().top;
   $(window).on("scroll", function () {
-    if ($(window).scrollTop() > 50) {
-      $("nav").addClass("shrink");
+    if ($(window).scrollTop() > altura) {
+      $(".container_menu ").addClass("shrink");
     } else {
-      $("nav").removeClass("shrink");
-      $("nav").addClass("top");
+      $(".container_menu ").removeClass("shrink");
+      $(".container_menu ").addClass("top");
     }
   });
 
@@ -32,68 +32,62 @@ $(document).ready(function () {
   });
 
   $("#valeriasaez").on("click", function () {
-    var position = 450;
+    var position = 500;
     $("body, html").animate(
       {
         scrollTop: position + "px",
       },
       2000
     );
-    $("#selected").addClass("bottom");
   });
 
   $("#educacion").on("click", function () {
-    var position = 750;
+    var position = 930;
     $("body, html").animate(
       {
         scrollTop: position + "px",
       },
       2000
     );
-    $("#selected").addClass("bottom");
   });
 
   $("#formacion").on("click", function () {
-    var position = 750;
+    var position = 930;
     $("body, html").animate(
       {
         scrollTop: position + "px",
       },
       2000
     );
-    $("#selected").addClass("bottom");
   });
 
   $("#conocimientos").on("click", function () {
-    var position = 1050;
+    var position = 1400;
     $("body, html").animate(
       {
         scrollTop: position + "px",
       },
       2000
     );
-    $("#selected").addClass("bottom");
   });
 
   $("#portfolio").on("click", function () {
-    var position = 1350;
+    var position = 2000;
     $("body, html").animate(
       {
         scrollTop: position + "px",
       },
       2000
     );
-    $("#selected").addClass("bottom");
   });
 
   $("#contacto").on("click", function () {
-    var position = 1650;
+    var position = 2750;
     $("body, html").animate(
       {
         scrollTop: position + "px",
       },
       2000
     );
-    $("#selected").addClass("bottom");
   });
 });
