@@ -91,3 +91,13 @@ $(document).ready(function () {
     );
   });
 });
+
+/*Modal_login*/
+
+(function () {
+  $(function () {
+    $("#btn_ventana_login").on("click", function () {
+      $("#ventana_modal_login").modal();
+    });
+  });
+});
