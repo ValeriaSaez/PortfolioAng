@@ -7,9 +7,14 @@
       <img src="./assets/img/APLogo-color.png" alt="" />
     </div>
     <div class="icon_gral">
-      <div class="login">
-        <span class="login_val"><i class="bi bi-person-fill"></i></span>
-      </div>
+      <button
+        type="button"
+        onclick="showModalLogin();"
+        class="login_val"
+        id="open"
+      >
+        <i class="bi bi-person-fill"></i>
+      </button>
 
       <div class="container_icon">
         <span class="social_icon">
@@ -112,17 +117,34 @@
           Una estudiante, apadionada por el Diseño y con interés por el Diseño
           del Desarrollo web. Me encuentro constantemente en la busqueda de
           adquirir nuevos conocimientos y abarcar nuevas áreas en el mundo IT.
+
+          <a href="#" onclick="vermas('mas');" id="mas">... leer más</a>
+        </p>
+        <p id="desplegar" style="display: none">
           Quiero crecer profesionalmente y así poder aplicar mis conocimientos
           en proyectos de Desarrollo Web Responsive.
+          <a href="#" onclick="vermas('menos');" id="menos">... leer menos</a>
         </p>
+        <button type="button" onclick="showModal();" class="boton_redondo">
+          <i class="bi bi-pencil-fill"></i>
+        </button>
+        <button class="boton_redondo">
+          <i class="bi bi-x-lg"></i>
+        </button>
         <div class="button_cover">
-          <input type="button" class="btn_readmore_cover" value="Leer más" />
-          <input type="button" class="btn_cv_cover" value="Curriculum Vitae" />
+          <button type="button" class="cta" value="">
+            <a download="ValeriaSaez" href="./assets/img/cv_vss-01.png">
+              <i class="bi bi-save2-fill"></i>Curriculum Vitae</a
+            >
+          </button>
         </div>
       </div>
       <div class="img_cover">
         <img src="./assets/img/img_Valeria.png" alt="" />
       </div>
+      <button type="button" onclick="showModal();" class="boton_redondo">
+        <i class="bi bi-pencil-fill"></i>
+      </button>
     </div>
   </article>
 
@@ -152,8 +174,16 @@
               <p>
                 Ingeniería en Sistemas de Información. Tercer año Incompleto.
               </p>
-              <button type="button" onclick="showModal();">Editar</button>
-              <button>cerrar</button>
+              <button
+                type="button"
+                onclick="showModal();"
+                class="boton_redondo"
+              >
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <button class="boton_redondo">
+                <i class="bi bi-x-lg"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -177,6 +207,16 @@
                 Técnico Superior en Diseño Gráfico y Publicitario. Cursado
                 Completo.
               </p>
+              <button
+                type="button"
+                onclick="showModal();"
+                class="boton_redondo"
+              >
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <button class="boton_redondo">
+                <i class="bi bi-x-lg"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -197,10 +237,24 @@
           <div class="card_back">
             <div class="body_card_back">
               <p>Programador Web Full Stack junior. #YoProgramo</p>
+              <button
+                type="button"
+                onclick="showModal();"
+                class="boton_redondo"
+              >
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <button class="boton_redondo">
+                <i class="bi bi-x-lg"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      <button type="button" onclick="showModal();" class="boton_redondo">
+        <i class="bi bi-plus-lg"></i>
+      </button>
     </div>
   </article>
 
@@ -214,7 +268,7 @@
     <div class="container_skills">
       <div class="skills">
         <li>
-          <h4>html5</h4>
+          <h4>Html5</h4>
           <span class="bar"><span class="html"></span></span>
         </li>
         <li>
@@ -222,9 +276,16 @@
           <span class="bar"><span class="css"></span></span>
         </li>
         <li>
-          <h4>js</h4>
+          <h4>JS</h4>
           <span class="bar"><span class="js"></span></span>
         </li>
+        <li>
+          <h4>Angular</h4>
+          <span class="bar"><span class="angular"></span></span>
+        </li>
+        <button type="button" onclick="showModal();" class="boton_redondo">
+          <i class="bi bi-pencil-fill"></i>
+        </button>
       </div>
       <div class="skills_design">
         <li>
@@ -243,20 +304,48 @@
           <h4>figma</h4>
           <span class="bar"><span class="figma"></span></span>
         </li>
+        <button type="button" onclick="showModal();" class="boton_redondo">
+          <i class="bi bi-pencil-fill"></i>
+        </button>
       </div>
     </div>
+    <button type="button" onclick="showModal();" class="boton_redondo">
+      <i class="bi bi-plus-lg"></i>
+    </button>
   </article>
   <!--portfolio-->
   <article class="job">
     <div class="titulos"><h2>Portfolio</h2></div>
     <div class="container_job">
       <div class="box" style="background-color: #f73072">
-        <div class="box_shover"><h5></h5></div>
+        <button
+          type="button"
+          onclick="showModal();"
+          class="boton_redondo_portfolio"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
+        <h5></h5>
       </div>
+
       <div class="box">
+        <button
+          type="button"
+          onclick="showModal();"
+          class="boton_redondo_portfolio"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
         <h5></h5>
       </div>
       <div class="box">
+        <button
+          type="button"
+          onclick="showModal();"
+          class="boton_redondo_portfolio"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
         <h5></h5>
       </div>
       <div class="box">
@@ -265,18 +354,53 @@
         </div>
       </div>
       <div class="box" style="background-color: #f95db3">
+        <button
+          type="button"
+          onclick="showModal();"
+          class="boton_redondo_portfolio"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
         <h5></h5>
       </div>
       <div class="box" style="background-color: #fc0b89">
+        <button
+          type="button"
+          onclick="showModal();"
+          class="boton_redondo_portfolio"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
         <h5></h5>
       </div>
       <div class="box">
+        <button
+          type="button"
+          onclick="showModal();"
+          class="boton_redondo_portfolio"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
         <h5></h5>
       </div>
       <div class="box">
+        <button
+          type="button"
+          onclick="showModal();"
+          class="boton_redondo_portfolio"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
         <h5></h5>
       </div>
       <div class="box" style="background-color: #f9d7ec">
+        <button
+          type="button"
+          onclick="showModal();"
+          class="boton_redondo_portfolio"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
         <h5></h5>
       </div>
     </div>
@@ -304,47 +428,73 @@
         <h3>Informacion de Contacto</h3>
         <div class="row2">
           <span class="social_icon_footer"
-            ><i class="bi bi-geo-alt-fill"></i
+            ><a
+              href="https://www.google.com/maps/place/Liceo+Country+Club/@-32.9884594,-68.8215797,15z/data=!4m5!3m4!1s0x0:0x88a90f3a8311b1ef!8m2!3d-32.9884594!4d-68.8215797"
+              target="_blank"
+              ><i class="bi bi-geo-alt-fill"></i></a
           ></span>
-          <label>Liceo Country Club MR C10 | Maipú | Mendoza | Argentina</label>
+          <label class="label_footer"
+            >Liceo Country Club MR C10 | Maipú | Mendoza | Argentina</label
+          >
         </div>
         <div class="row2">
           <span class="social_icon_footer"
-            ><i class="bi bi-phone-vibrate"></i
+            ><a href="https://wa.me/542616642780?text=Hola" target="_blank">
+              <i class="bi bi-phone-vibrate"></i></a
           ></span>
-          <label>+54 261 6642780</label>
+          <label class="label_footer">+54 261 6642780</label>
         </div>
         <div class="row2">
-          <span class="social_icon_footer"><i class="bi bi-envelope"></i></span>
-          <label>saez.valeria@gmail.com</label>
+          <span class="social_icon_footer"
+            ><a href="mailto:saez.valeria@gmail.com"
+              ><i class="bi bi-envelope"></i></a
+          ></span>
+          <label class="label_footer">saez.valeria@gmail.com</label>
         </div>
         <div class="container_footer_redes"></div>
         <h3>Redes Sociales</h3>
 
         <div class="container_icon">
-          <span class="social_icon_footer"><i class="bi bi-whatsapp"></i></span>
-          <span class="social_icon_footer"><i class="bi bi-linkedin"></i></span>
-          <span class="social_icon_footer"><i class="bi bi-github"></i></span>
+          <span class="social_icon_footer"
+            ><a href="https://wa.me/542616642780?text=Hola" target="_blank"
+              ><i class="bi bi-whatsapp"></i></a
+          ></span>
+          <span class="social_icon_footer"
+            ><a
+              href="https://linkedin.com/in/valeria-saez-738b219a"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i></a
+          ></span>
+          <span class="social_icon_footer"
+            ><a href="https://github.com/ValeriaSaez" target="_blank">
+              <i class="bi bi-github"></i></a
+          ></span>
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<div id="modal_mod_formacion" class="modal" tabindex="-1">
+<!--ModalBoostrap-->
+<div id="modal_mod_formacion" class="modal fade" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Modificar Formacion</h5>
         <button
           type="button"
-          class="btn-close"
+          class="btn-close btn-close-white"
           data-bs-dismiss="modal"
           aria-label="Close"
         ></button>
       </div>
       <div class="modal-body">
-        <input type="text" id="txt_formacion" />
+        <div class="mb-3">
+          <label for="message-text" class="col-form-label"
+            >Escribir texto:</label
+          >
+          <textarea class="mod_formacion" id="message-text"></textarea>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -358,16 +508,21 @@
 
 <!--Login-->
 
-<section class="modal_login" id="ventana_modal_login">
-  <div class="modal_container_login">
+<section id="modal_login" class="modal" tabindex="-1">
+  <div class="modal-dialog modal_container_login">
     <div class="container_all">
       <div class="container_form_login">
         <div class="unlock">
           <img src="assets/img/login.png" alt="" />
         </div>
-        <div id="close" class="close_login">
-          <a href="">X</a>
-        </div>
+        <button
+          class="boton_redondo_login"
+          onclick="closeModalLogin();"
+          id="close"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+
         <h2>Iniciar Sesion</h2>
 
         <form action="">
@@ -388,3 +543,5 @@
     </div>
   </div>
 </section>
+
+<!--Modal_cv-->

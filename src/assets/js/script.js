@@ -2,15 +2,22 @@
   var posicion = window.pageYOffset || document.documentElement.scrollTop;
   var elemento1 = document.
 };*/
+/*
+const { Script } = require("vm");
 
-/*Conocimientos*/
+Conocimientos */
 
 function showModal() {
   $("#modal_mod_formacion").modal("show");
 }
 
+function showModalLogin() {
+  $("#modal_login").modal("show");
+}
+
 $(document).ready(function () {
   var altura = $(".container_menu ").offset().top;
+
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > altura) {
       $(".container_menu ").addClass("shrink");
@@ -92,12 +99,37 @@ $(document).ready(function () {
   });
 });
 
-/*Modal_login*/
+/*Modal_login
 
-(function () {
-  $(function () {
-    $("#btn_ventana_login").on("click", function () {
-      $("#ventana_modal_login").modal();
-    });
-  });
+const open = document.getElementById("open");
+const modal_login = document.getElementById("modal_login");
+const close = document.getElementById("close");
+
+open.addEventListener("click", () => {
+  modal_login.classList.add("show");
 });
+
+close.addEventListener("click", () => {
+  modal_login.classList.remove("show");
+}); */
+
+function vermas(id) {
+  if (id == "mas") {
+    document.getElementById("desplegar").style.display = "block";
+    document.getElementById("mas").style.display = "none";
+  } else {
+    document.getElementById("desplegar").style.display = "none";
+    document.getElementById("mas").style.display = "inline";
+  }
+}
+/*
+let cerrar = document.querySelectorAll(".close")[0];
+let abrir = document.querySelectorAll(".cta")[0];
+let modal = document.querySelectorAll(".modal_c")[0];
+let modalc = document.querySelectorAll(".modal_c_v")[0];
+
+
+ $(document).on("click", "#open", function () {
+    $("#modal_login").modal("show");
+  });
+*/

@@ -77,8 +77,10 @@ header {
 }
 
 .login_val {
-  height: 35px;
-  width: 215px;
+  height: 35px !important;
+  width: 215px !important;
+  background: none !important;
+  border: 0 !important;
   display: flex;
   justify-content: right;
   align-items: right;
@@ -271,26 +273,34 @@ article p {
 
 /*button_cover*/
 .button_cover {
+  text-decoration: none;
   display: flex;
-  margin-top: 30px;
+  width: 100% !important;
+  justify-content: center !important;
+  align-items: center !important;
+  *margin-top: 30px;
+  margin-left: -20px !important;
 }
-.btn_readmore_cover,
-.btn_cv_cover {
-  padding: 8px 25px;
+
+.cta {
+  width: 160px;
+  height: 40px;
+  padding: 0px;
   border: none;
+  margin-bottom: 15px;
   font-size: 14px;
   font-family: "Libre Baskerville", serif;
   text-shadow: 0.05em 0.05em rgb(0, 0, 0);
   font-weight: bold;
-  margin-left: 10px;
-  background-color: rgb(255, 44, 107);
-  color: #ffffff;
+  *margin-left: 10px;
+  background-color: #fd104b;
+  color: #ffffff !important;
   cursor: pointer;
   transition: background, color, 300ms;
   box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
-.btn_readmore_cover:hover,
-.btn_cv_cover:hover {
+
+.cta :hover {
   background-color: rgb(255, 44, 107, 0.8);
   color: #ffffff;
   font-size: 14px;
@@ -299,6 +309,7 @@ article p {
   font-weight: bold;
   transform: scale(1.1);
 }
+
 /*text_cover*/
 .text_informacion_cover {
   width: 60%;
@@ -484,6 +495,10 @@ h4 {
   width: 10%;
   animation: js 2s;
 }
+.angular {
+  width: 10%;
+  animation: js 2s;
+}
 .bootstrap {
   width: 70%;
   animation: bootstrap 2s;
@@ -658,7 +673,8 @@ footer {
   *margin-top: 5px;
   font-family: "Libre Baskerville", serif;
 }
-.social_icon_footer {
+
+.social_icon_footer a {
   height: 35px;
   width: 35px;
   display: flex;
@@ -666,18 +682,23 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  color: #fdfdfd;
+  color: #fdfdfd !important;
   border-radius: 7px;
   margin-right: 20px;
   *padding-right: 50px;
   cursor: pointer;
 }
-.social_icon_footer i {
+.social_icon_footer a {
+  color: rgba(247, 48, 114, 0.5);
   transition: 0.45s all;
 }
-.social_icon_footer i:hover {
+.social_icon_footer a:hover {
   transform: scale(1.1);
   opacity: 0.6;
+}
+.label_footer {
+  font-size: 14px !important;
+  color: #ecebec !important;
 }
 /**********************ELEMENTOS_RESPONSIVOS*******************/
 .icon_menu {
@@ -900,13 +921,17 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
   display: flex;
   z-index: 99999;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
-#ventana_modal_login {
-  *opacity: 1;
-  *pointer-events: unset;
-}
+
+/*
+.show_login {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}*/
+
 .modal_container_login {
   margin: auto;
   width: 90%;
@@ -920,8 +945,8 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
 }
 .container_form_login {
   width: 400px;
-  height: 320px;
-  background-color: rgba(165, 165, 165, 0.6);
+  height: 350px;
+  background-color: rgba(150, 150, 150, 0.5);
   padding: 10px !important;
   font-family: "Libre Baskerville", serif;
   border-radius: 5px;
@@ -970,7 +995,7 @@ label {
   color: #494949;
   padding: 20px;
   margin-left: 25px;
-  font-size: 11px;
+  font-size: 12px;
 }
 #checkid {
   color: #f73072;
@@ -1002,4 +1027,154 @@ label {
   cursor: pointer;
 
   opacity: 0.6;
+}
+
+/*botones redondos*/
+.boton_redondo {
+  display: inline-block;
+  background-color: #fd104b;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(114, 114, 114);
+  color: #ffffff;
+  margin-top: 10px !important;
+  margin-left: 3px !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.boton_redondo:hover {
+  transform: scale(1.1);
+}
+
+.boton_redondo_portfolio {
+  display: inline-block;
+  background-color: #fd104b;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(114, 114, 114);
+  color: #ffffff;
+  margin-top: -120px !important;
+  margin-left: 100px !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.boton_redondo_portfolio:hover {
+  transform: scale(1.1);
+}
+.boton_redondo_login {
+  display: inline-block;
+  background-color: #fd104b;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(114, 114, 114);
+  color: #ffffff;
+  padding: 10px 15px;
+  margin-top: -400px !important;
+  margin-left: 350px !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/*ModalBootstrap*/
+
+.modal-dialog {
+  z-index: 99999 !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  left: 30% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.modal-content {
+  width: 300px;
+  height: 500px;
+
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  font-family: "Libre Baskerville";
+  border-radius: 5px;
+  box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+}
+
+.modal-header {
+  background-color: #686667 !important;
+  padding: 20px !important;
+  box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.3) !important;
+}
+.modal-title {
+  font-family: "Libre Baskerville";
+  font-size: 16px !important;
+  text-align: center;
+  color: #ecebec;
+  *text-shadow: 0.05em 0.05em rgb(250, 161, 161);
+}
+.modal-footer {
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.btn {
+  *margin-top: 30px;
+  margin: 0px !important;
+}
+
+.btn-secondary,
+.btn-primary {
+  width: 160px !important;
+  height: 40px !important;
+  padding: 0px !important;
+  border: none !important;
+  margin-bottom: 15px !important;
+  margin-left: 10px !important;
+  font-size: 14px;
+  font-family: "Libre Baskerville", serif;
+  text-shadow: 0.05em 0.05em rgb(0, 0, 0) !important;
+  font-weight: bold;
+  *margin-left: 10px;
+  background-color: #fd104b !important;
+  color: #ffffff !important;
+  cursor: pointer;
+  transition: background, color, 300ms;
+  box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.5) !important;
+}
+.btn-secondary:hover,
+.btn-primary:hover {
+  background-color: rgb(255, 44, 107, 0.8) !important;
+  color: #ffffff !important;
+  font-size: 14px;
+  text-shadow: 0.05em 0.05em rgb(0, 0, 0) !important;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+.modal-body {
+  display: flex !important;
+  width: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.mod_formacion {
+  width: 100% !important;
+  height: 300px !important;
+  margin: 0 !important;
+  overflow: scroll !important;
+}
+
+div p a {
+  text-decoration: none;
+  color: rgb(255, 47, 92);
+  font-size: 14px !important;
+  padding: 10px !important;
+}
+div p a:hover {
+  color: rgb(250, 169, 187);
+  transform: scale(1.1);
 }
