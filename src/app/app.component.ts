@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AppPortfolio';
+  estaLogueado = false;
+
+  validarInicioSesion() {
+    console.log('hola!');
+    if()
+    this.estaLogueado = true;
+  }
 }
