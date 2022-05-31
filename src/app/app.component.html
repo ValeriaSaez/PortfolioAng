@@ -7,12 +7,7 @@
       <img src="./assets/img/APLogo-color.png" alt="" />
     </div>
     <div class="icon_gral">
-      <button
-        type="button"
-        onclick="showModalLogin();"
-        class="login_val"
-        id="open"
-      >
+      <button type="button" onclick="showModalLogin();" class="login_val">
         <i class="bi bi-person-fill"></i>
       </button>
 
@@ -111,19 +106,16 @@
   <article class="valeria_cover">
     <div class="cover">
       <div class="text_informacion_cover">
-        <h4>Hola! Soy</h4>
+        <p>Hola! Soy</p>
         <h2>Valeria Saez...</h2>
         <p>
           Una estudiante, apadionada por el Diseño y con interés por el Diseño
           del Desarrollo web. Me encuentro constantemente en la busqueda de
           adquirir nuevos conocimientos y abarcar nuevas áreas en el mundo IT.
-
-          <a href="#" onclick="vermas('mas');" id="mas">... leer más</a>
         </p>
-        <p id="desplegar" style="display: none">
+        <p>
           Quiero crecer profesionalmente y así poder aplicar mis conocimientos
           en proyectos de Desarrollo Web Responsive.
-          <a href="#" onclick="vermas('menos');" id="menos">... leer menos</a>
         </p>
         <button type="button" onclick="showModal();" class="boton_redondo">
           <i class="bi bi-pencil-fill"></i>
@@ -132,11 +124,13 @@
           <i class="bi bi-x-lg"></i>
         </button>
         <div class="button_cover">
-          <button type="button" class="cta" value="">
-            <a download="ValeriaSaez" href="./assets/img/cv_vss-01.png">
-              <i class="bi bi-save2-fill"></i>Curriculum Vitae</a
-            >
-          </button>
+          <a download="ValeriaSaez" href="./assets/img/cv_vss-01.png">
+            <input
+              type="button"
+              class="btn_readmore_cover p_button_i"
+              value="Curriculum Vitae"
+            />
+          </a>
         </div>
       </div>
       <div class="img_cover">
@@ -508,37 +502,51 @@
 
 <!--Login-->
 
-<section id="modal_login" class="modal" tabindex="-1">
-  <div class="modal-dialog modal_container_login">
-    <div class="container_all">
+<section id="modal_login" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div
+      class="modal-content"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none !important;
+        box-shadow: none !important;
+        border-style: none !important;
+      "
+    >
       <div class="container_form_login">
         <div class="unlock">
           <img src="assets/img/login.png" alt="" />
         </div>
         <button
-          class="boton_redondo_login"
+          type="button"
+          class="btn-close"
+          data-dismiss="modal"
+          data-bs-dismiss="modal"
+          aria-label="Close"
           onclick="closeModalLogin();"
           id="close"
-        >
-          <i class="bi bi-x-lg"></i>
-        </button>
+        ></button>
 
         <h2>Iniciar Sesion</h2>
-
-        <form action="">
-          <input type="text" placeholder="usuario" />
-          <input type="password" placeholder="password" />
-          <input class="check" type="checkbox" id="checkid" />
-          <label for="checkid">Recordar Contraseña</label>
-          <a href="">¿Olvidaste Contraseña?</a>
-          <div class="button_cover">
-            <input
-              type="button"
-              class="btn_readmore_cover"
-              value="Iniciar Seción"
-            />
+        <div class="modal-body">
+          <div class="mb-3">
+            <input type="text" placeholder="usuario" name="" />
+            <input type="password" placeholder="password" name="" />
+            <input class="check" type="checkbox" id="checkid" />
+            <label for="checkid">Recordar Contraseña</label>
+            <a href="">¿Olvidaste Contraseña?</a>
           </div>
-        </form>
+        </div>
+        <div class="button_cover btn_login_cover">
+          <input
+            type="button"
+            class="btn_readmore_cover"
+            value="Iniciar Sesión"
+            (onclick)="validarInicioSesion()"
+          />
+        </div>
       </div>
     </div>
   </div>
