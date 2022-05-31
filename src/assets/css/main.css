@@ -276,35 +276,33 @@ article p {
   text-decoration: none;
   display: flex;
   width: 100% !important;
-  justify-content: center !important;
-  align-items: center !important;
-  *margin-top: 30px;
-  margin-left: -20px !important;
+  margin-top: 20px !important;
 }
 
 .cta {
-  width: 160px;
-  height: 40px;
-  padding: 0px;
-  border: none;
-  margin-bottom: 15px;
+  width: 220px !important;
+  height: 45px !important;
+  padding: 0px !important;
+  border: none !important;
+  margin-bottom: 40px !important;
+  margin-left: 10px !important;
   font-size: 14px;
   font-family: "Libre Baskerville", serif;
-  text-shadow: 0.05em 0.05em rgb(0, 0, 0);
+  text-shadow: 0.05em 0.05em rgb(0, 0, 0) !important;
   font-weight: bold;
   *margin-left: 10px;
-  background-color: #fd104b;
+  background-color: #fd104b !important;
   color: #ffffff !important;
   cursor: pointer;
   transition: background, color, 300ms;
-  box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.5) !important;
 }
 
 .cta :hover {
-  background-color: rgb(255, 44, 107, 0.8);
-  color: #ffffff;
+  background-color: rgb(255, 44, 107, 0.8) !important;
+  color: #ffffff !important;
   font-size: 14px;
-  text-shadow: 0.05em 0.05em rgb(0, 0, 0);
+  text-shadow: 0.05em 0.05em rgb(0, 0, 0) !important;
   font-family: "Libre Baskerville", serif;
   font-weight: bold;
   transform: scale(1.1);
@@ -921,7 +919,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
   display: flex;
   z-index: 99999;
   justify-content: center;
-  pointer-events: none !important;
+  pointer-events: fill !important;
   opacity: 0 !important;
   background-color: rgba(255, 255, 255, 0.8) !important;
 }
@@ -938,16 +936,17 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
   max-width: 600px;
 }
 .container_all {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+  *display: flex;
+  *height: 100vh;
+  *align-items: center;
+  *justify-content: center;
 }
+
 .container_form_login {
   width: 400px;
   height: 350px;
-  background-color: rgba(150, 150, 150, 0.5);
-  padding: 10px !important;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0px !important;
   font-family: "Libre Baskerville", serif;
   border-radius: 5px;
   box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.4);
@@ -972,7 +971,7 @@ input {
   display: block;
   width: 300px;
   height: 40px;
-  margin-left: 40px !important;
+  margin-left: 0px !important;
   margin-bottom: 10px !important;
   padding: 0 40px !important;
   font-size: 12px !important;
@@ -1025,10 +1024,29 @@ label {
 }
 .close_login a:hover {
   cursor: pointer;
-
   opacity: 0.6;
 }
+.btn-close {
+  display: inline-block !important;
+  width: 100% !important;
+  background-color: #ffffff !important;
+  border: none !important;
+  border-bottom: 2px solid rgb(114, 114, 114) !important;
+  color: #ff3869f8 !important;
+  margin-top: -40px !important;
+  margin-left: 350px !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50% !important;
+}
 
+.btn-close:hover {
+  transform: scale(1.1);
+  border: none !important;
+}
+.btn_login_cover {
+  margin-left: 45px !important;
+}
 /*botones redondos*/
 .boton_redondo {
   display: inline-block;
@@ -1042,6 +1060,7 @@ label {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  display: none !important;
 }
 .boton_redondo:hover {
   transform: scale(1.1);
@@ -1059,6 +1078,7 @@ label {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  display: none !important;
 }
 .boton_redondo_portfolio:hover {
   transform: scale(1.1);
@@ -1093,7 +1113,6 @@ label {
 .modal-content {
   width: 300px;
   height: 500px;
-
   background-color: rgba(255, 255, 255, 0.8) !important;
   font-family: "Libre Baskerville";
   border-radius: 5px;
@@ -1166,15 +1185,4 @@ label {
   height: 300px !important;
   margin: 0 !important;
   overflow: scroll !important;
-}
-
-div p a {
-  text-decoration: none;
-  color: rgb(255, 47, 92);
-  font-size: 14px !important;
-  padding: 10px !important;
-}
-div p a:hover {
-  color: rgb(250, 169, 187);
-  transform: scale(1.1);
 }

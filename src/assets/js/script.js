@@ -99,20 +99,6 @@ $(document).ready(function () {
   });
 });
 
-/*Modal_login
-
-const open = document.getElementById("open");
-const modal_login = document.getElementById("modal_login");
-const close = document.getElementById("close");
-
-open.addEventListener("click", () => {
-  modal_login.classList.add("show");
-});
-
-close.addEventListener("click", () => {
-  modal_login.classList.remove("show");
-}); */
-
 function vermas(id) {
   if (id == "mas") {
     document.getElementById("desplegar").style.display = "block";
